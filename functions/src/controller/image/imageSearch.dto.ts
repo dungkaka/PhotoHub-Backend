@@ -1,0 +1,3 @@
+interface ImageSearchDTO {
+    tags: [],
+}
