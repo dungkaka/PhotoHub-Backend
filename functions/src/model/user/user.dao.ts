@@ -15,6 +15,7 @@ class UserDAO {
         return {
             username: user.username,
             password: user.password,
+            name: user.name,
             email: user.email,
             age: user.age?user.age:"",
             gender: user.gender?user.gender:"",
@@ -30,10 +31,12 @@ class UserDAO {
         return {
             username: user.username,
             password: user.password,
+            name: user.name,
             email: user.email,
             age: user.age,
             gender: user.gender,
             role: user.role,
+            id: user.id,
         }
     };
 

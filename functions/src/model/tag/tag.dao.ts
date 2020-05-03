@@ -1,7 +1,6 @@
 import {firestoreRef} from "../../config/firebase";
 import HttpException from "../../exception/HttpException";
 
-
 class TagDAO {
     private static tagsRef = firestoreRef.collection("tags");
 

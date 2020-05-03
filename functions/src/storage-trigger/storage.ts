@@ -1,16 +1,18 @@
 import {GetSignedUrlConfig} from "@google-cloud/storage";
-
+import { admin } from "../config/firebase";
+import ImageDAO from "../model/image/image.dao";
 const functions = require('firebase-functions');
-const mkdirp = require('mkdirp-promise');
+const mkdirp = require('mkdirp');
 const spawn = require('child-process-promise').spawn;
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-import { admin } from "../config/firebase";
+
+
 
 // Max height and width of the thumbnail in pixels.
-const THUMB_MAX_HEIGHT = 200;
-const THUMB_MAX_WIDTH = 200;
+const THUMB_MAX_HEIGHT = 250;
+const THUMB_MAX_WIDTH = 250;
 // Thumbnail prefix added to file names.
 const THUMB_PREFIX = 'thumb_';
 
@@ -18,7 +20,6 @@ const THUMB_PREFIX = 'thumb_';
 export const generateThumbnail = functions.storage.object().onFinalize(async (object) => {
 
     // File and directory paths.
-    console.log(object);
     const filePath = object.name;
     const contentType = object.contentType; // This is the image MIME type
     const fileDir = path.dirname(filePath);
@@ -27,6 +28,8 @@ export const generateThumbnail = functions.storage.object().onFinalize(async (ob
     const tempLocalFile = path.join(os.tmpdir(), filePath);
     const tempLocalDir = path.dirname(tempLocalFile);
     const tempLocalThumbFile = path.join(os.tmpdir(), thumbFilePath);
+
+    console.log("PATH FILE CONSOLE HERE", filePath, thumbFilePath, tempLocalFile, tempLocalDir, tempLocalThumbFile);
 
     // Exit if this is triggered on a file that is not an image.
     if (!contentType.startsWith('image/')) {
@@ -86,6 +89,7 @@ export const generateThumbnail = functions.storage.object().onFinalize(async (ob
     const thumbFileUrl = thumbResult[0];
     const fileUrl = originalResult[0];
     // Add the URLs to the Database
-    await admin.database().ref('images').push({path: fileUrl, thumbnail: thumbFileUrl});
+    console.log("URL", fileUrl, thumbFileUrl);
+    await ImageDAO.updateThumbnailofImage(filePath, thumbFileUrl);
     console.log('Thumbnail URLs saved to database.');
 });

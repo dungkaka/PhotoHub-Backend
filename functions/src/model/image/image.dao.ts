@@ -71,18 +71,23 @@ class ImageDAO {
     };
 
     public static addImage = async (images: any) => {
-        const imageRef = await ImageDAO.imagesRef.add(images);
-        const image = await imageRef.get();
-        if(image) {
-            const tagsArray = [];
-            // @ts-ignore
-            for (const field in image.data().tags) {
-                tagsArray.push(field);
+        try {
+            const imageRef = await ImageDAO.imagesRef.add(images);
+            const image = await imageRef.get();
+            if(image) {
+                const tagsArray = [];
+                // @ts-ignore
+                for (const field in image.data().tags) {
+                    tagsArray.push(field);
+                }
+                return {...image.data(), id: image.id, tags: tagsArray};
+            } else {
+                throw new HttpException(400, "Can find image");
             }
-            return {...image.data(), id: image.id, tags: tagsArray};
-        } else {
-            throw new HttpException(40, "Can find image");
+        } catch (error) {
+            throw new HttpException(400, error.message);
         }
+
     };
 
     public static getAllImage = async () => {
@@ -185,7 +190,9 @@ class ImageDAO {
                     message: "Completed like image !"
                 };
             } else {
-                throw new HttpException(400, "User already like this image");
+                return {
+                    message: "User already like this image"
+                };
             }
         } else {
             throw new HttpException(400, "Image can not found");
@@ -219,7 +226,9 @@ class ImageDAO {
                     message: "Completed unlike image !"
                 };
             } else {
-                throw new HttpException(400, "User have not like this image yet");
+                return {
+                    message: "User have not like this image yet"
+                };
             }
         } else {
             throw new HttpException(400, "Image can not found");
@@ -240,6 +249,21 @@ class ImageDAO {
         return {
             message: "Update image successfully !"
         }
+    }
+
+    public static updateThumbnailofImage = async (filePath: any, thumb_url: any) => {
+        console.log("compare", filePath);
+        const tagsQuerySnapshot =  await ImageDAO.imagesRef.where("internalPath", "==", filePath).get();
+
+        for (let doc of tagsQuerySnapshot.docs) {
+            try {
+
+                await ImageDAO.updateImage({id: doc.id, thumbnail_url: thumb_url});
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        return;
     }
 
 

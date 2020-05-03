@@ -3,6 +3,7 @@ interface UserModel {
     username: string;
     password: string;
     email: string;
+    name: string;
     age?: string;
     gender?: string;
     role: string;

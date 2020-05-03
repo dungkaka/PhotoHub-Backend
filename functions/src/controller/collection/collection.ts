@@ -4,7 +4,6 @@ import authMiddleware from "../../middleware/auth.middleware";
 import RequestWithUser from "../../interfaces/requestUser.interface";
 import CollectionDAO from "../../model/collection/collection.dao";
 
-
 class Collection implements Controller {
     public path = "";
     public router = express.Router();
@@ -24,11 +23,17 @@ class Collection implements Controller {
         this.router.delete(`${this.path}/collections/:collectionId/delete-image`, authMiddleware, this.deletedImageFromCollection);
         // @ts-ignore
         this.router.get(`${this.path}/collections/:collectionId`, authMiddleware, this.getCollectionById);
-
+        // @ts-ignore
+        this.router.delete(`${this.path}/collections/:collectionId`, authMiddleware, this.deleteCollection);
+        // @ts-ignore
+        this.router.put(`${this.path}/collections/:collectionId`, authMiddleware, this.updateCollection);
     }
 
-
-    private getCollectionById = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
+    private getCollectionById = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
         const user = request.user;
         const collectionId = request.params.collectionId;
 
@@ -37,67 +42,155 @@ class Collection implements Controller {
             const collectionDAO = new CollectionDAO(user.id);
             const collection = await collectionDAO.findCollectionsById(collectionId);
 
-            response.status(200).send(JSON.stringify({
-                status: true,
-                collection: collection,
-            }, null, '\t'))
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        collection: collection,
+                    },
+                    null,
+                    "\t"
+                )
+            );
         } catch (error) {
             response.send({
                 status: false,
                 code: error.status,
                 message: error.message,
-            })
+            });
         }
     };
 
-    private getAllCollection = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
+    private getAllCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
         const user = request.user;
         try {
             // @ts-ignore
             const collectionDAO = new CollectionDAO(user.id);
             const collections = await collectionDAO.getAllCollection();
 
-            response.status(200).send(JSON.stringify({
-                status: true,
-                collections: collections,
-            }, null, '\t'))
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        collections: collections,
+                    },
+                    null,
+                    "\t"
+                )
+            );
         } catch (error) {
             response.send({
                 status: false,
                 code: error.status,
                 message: error.message,
-            })
+            });
         }
     };
 
-    private createCollection = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
+    private createCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
         const collectionCreateDTO: CollectionCreateDTO = request.body;
         const user = request.user;
 
         try {
             // @ts-ignore
             const collectionDAO = new CollectionDAO(user.id);
-            const collection = await collectionDAO.createNewCollection(collectionDAO.convertToCollectionModel(collectionCreateDTO));
+            const collection = await collectionDAO.createNewCollection(
+                collectionDAO.convertToCollectionModel(collectionCreateDTO)
+            );
 
-            response.status(200).send(JSON.stringify({
-                status: true,
-                collection: collection,
-            }, null, '\t'));
-
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        collection: collection,
+                    },
+                    null,
+                    "\t"
+                )
+            );
         } catch (error) {
             response.send({
                 status: false,
                 code: error.status,
                 message: error.message,
-            })
+            });
         }
-    }
+    };
 
-    // private deleteColection = async (request: express.Request, response: express.Response, next: express.NextFunction) => {
-    //
-    // }
+    private deleteCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
+        const collectionId = request.params.collectionId;
+        const user = request.user;
 
-    private addImageToCollection = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
+        try {
+            // @ts-ignore
+            const collectionDAO = new CollectionDAO(user.id);
+            const deleteCollection = await collectionDAO.deleteCollection(
+                collectionId
+            );
+
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        message: deleteCollection.message,
+                    },
+                    null,
+                    "\t"
+                )
+            );
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    private updateCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
+        const collectionId = request.params.collectionId;
+        const collectionDTO = request.body;
+        const user = request.user;
+
+        try {
+            const collectionDAO = new CollectionDAO(user.id);
+            const collectionUpdate = await collectionDAO.updateCollection(
+                collectionId,
+                collectionDTO
+            );
+
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        messgae: collectionUpdate.message,
+                    },
+                    null,
+                    `\t`
+                )
+            );
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    private addImageToCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
         const collectionId = request.params.collectionId;
         const image = request.body;
         const user = request.user;
@@ -105,22 +198,35 @@ class Collection implements Controller {
         try {
             // @ts-ignore
             const collectionDAO = new CollectionDAO(user.id);
-            const addImage = await collectionDAO.addImageToCollection(image.image_id, collectionId);
+            const addImage = await collectionDAO.addImageToCollection(
+                image.image_id,
+                collectionId
+            );
 
-            response.status(200).send(JSON.stringify({
-                status: true,
-                message: addImage.message,
-            }, null, '\t'));
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        message: addImage.message,
+                    },
+                    null,
+                    "\t"
+                )
+            );
         } catch (error) {
             response.send({
                 status: false,
                 code: error.status,
                 message: error.message,
-            })
+            });
         }
-    }
+    };
 
-    private deletedImageFromCollection = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
+    private deletedImageFromCollection = async (
+        request: RequestWithUser,
+        response: express.Response,
+        next: express.NextFunction
+    ) => {
         const collectionId = request.params.collectionId;
         const image = request.body;
         const user = request.user;
@@ -128,21 +234,29 @@ class Collection implements Controller {
         try {
             // @ts-ignore
             const collectionDAO = new CollectionDAO(user.id);
-            const addImage = await collectionDAO.deletedImageFromCollection(image.image_id, collectionId);
+            const addImage = await collectionDAO.deletedImageFromCollection(
+                image.image_id,
+                collectionId
+            );
 
-            response.status(200).send(JSON.stringify({
-                status: true,
-                message: addImage.message,
-            }, null, '\t'));
+            response.status(200).send(
+                JSON.stringify(
+                    {
+                        status: true,
+                        message: addImage.message,
+                    },
+                    null,
+                    "\t"
+                )
+            );
         } catch (error) {
             response.send({
                 status: false,
                 code: error.status,
                 message: error.message,
-            })
+            });
         }
-    }
-
+    };
 }
 
 export default Collection;

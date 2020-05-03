@@ -76,11 +76,14 @@ class ImageQuery implements Controller {
 
     private addImage = async (request: RequestWithUser, response: express.Response, next: express.NextFunction) => {
         try {
+
             const imageDTO = request.body;
 
-            const imageB64 = imageDTO.imageB64.replace("data:image/png;base64,", "");
+            const imageB64 = imageDTO.imageB64.replace("data:image/jpeg;base64,", "");
+
             // @ts-ignore
-            const {metadata, url} = await uploadPicture(imageB64, imageDTO.name, imageDTO.name);
+            const {internalPath, metadata, signedUrl, url} = await uploadPicture(imageB64, imageDTO.name);
+
 
             const tags =  imageDTO.tags.reduce((map: any, obj: any) => {
                 map[obj] = true;
@@ -90,7 +93,10 @@ class ImageQuery implements Controller {
             const imageToDB = {
                 name: imageDTO.name,
                 tags: tags,
-                url: url
+                internalPath: internalPath,
+                url: signedUrl,
+                like_by: [],
+                likes: 0,
             };
 
             const image = await ImageDAO.addImage(imageToDB);

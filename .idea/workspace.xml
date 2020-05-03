@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2830a2fa-212c-4001-a93d-fe43d975e186" name="Default Changelist" comment="" />
+    <list default="true" id="2830a2fa-212c-4001-a93d-fe43d975e186" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/controller/booking/booking.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/middleware/auth.photographer.middleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/model/booking/booking.dao.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/model/chat/chat.dao.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/services/booking/booking.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/controller/account/authenication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/controller/account/authenication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/controller/collection/collection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/controller/collection/collection.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/controller/image/image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/controller/image/image.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/controller/image/imageToStorage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/image/image.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/image/image.dao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/tag/tag.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/tag/tag.dao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/user/user.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/user/user.dao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/user/user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/user/user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/model/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/model/user/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/storage-trigger/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/storage-trigger/storage.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/functions/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -13,49 +35,66 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/src/controller/account/authenication.ts">
+        <entry file="file://$PROJECT_DIR$/functions/src/controller/chat/chat.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1921">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/src/controller/account/initDefault.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1845">
+            <state relative-caret-position="289">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/src/model/image/image.dao.ts">
+        <entry file="file://$PROJECT_DIR$/functions/src/services/booking/booking.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2346">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/src/controller/booking/booking.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/src/model/booking/booking.dao.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/src/app.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/src/config/firebase.ts">
+        <entry file="file://$PROJECT_DIR$/functions/src/model/chat/chat.dao.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="408">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -63,31 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/src/server.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firebase.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions/src/controller/image/image.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -97,30 +113,53 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Query</find>
+      <find>urlImage</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/functions/package.json" />
         <option value="$PROJECT_DIR$/functions/src/app.ts" />
-        <option value="$PROJECT_DIR$/functions/src/model/image/image.dao.ts" />
         <option value="$PROJECT_DIR$/firebase.json" />
+        <option value="$PROJECT_DIR$/functions/package.json" />
+        <option value="$PROJECT_DIR$/functions/src/storage-trigger/storage.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/image/image.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/image/imageToStorage.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/account/authenication.ts" />
+        <option value="$PROJECT_DIR$/functions/src/middleware/auth.middleware.ts" />
+        <option value="$PROJECT_DIR$/functions/src/middleware/auth.photographer.middleware.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/user/user.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/user/user.model.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/user/user.dto.ts" />
+        <option value="$PROJECT_DIR$/functions/src/services/authenication/booking.service.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/booking/booking.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/collection/collection.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/image/image.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/tag/tag.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/server.ts" />
+        <option value="$PROJECT_DIR$/functions/src/model/chat/chat.dao.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/chat/chat.ts" />
+        <option value="$PROJECT_DIR$/functions/src/services/booking/booking.service.ts" />
+        <option value="$PROJECT_DIR$/functions/src/controller/booking/booking.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="297" />
-    <option name="y" value="27" />
-    <option name="width" value="1734" />
-    <option name="height" value="1002" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="90" />
+    <option name="y" value="30" />
+    <option name="width" value="1745" />
+    <option name="height" value="970" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,23 +183,30 @@
               <item name="PhotoHub-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="functions" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhotoHub-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="PhotoHub-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="functions" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="booking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PhotoHub-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PhotoHub-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/functions/lib/config" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -168,9 +214,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\Code_Project\00_DoAn\PhotoHub-Backend\functions\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code_Project\00_DoAn\PhotoHub-Backend\functions\src\services\booking" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code_Project\00_DoAn\PhotoHub-Backend\functions\lib\config" />
     </key>
@@ -197,116 +247,248 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583501906626</updated>
-      <workItem from="1583501909314" duration="9178000" />
+      <workItem from="1583501909314" duration="14244000" />
+      <workItem from="1583590423834" duration="5134000" />
+      <workItem from="1583642354040" duration="3737000" />
+      <workItem from="1583829935051" duration="1788000" />
+      <workItem from="1586014107042" duration="1883000" />
+      <workItem from="1586276029960" duration="3000" />
+      <workItem from="1586410494456" duration="1500000" />
+      <workItem from="1586872649785" duration="1223000" />
+      <workItem from="1586878419432" duration="2350000" />
+      <workItem from="1586964446767" duration="7666000" />
+      <workItem from="1587032836344" duration="5976000" />
+      <workItem from="1587045735377" duration="12264000" />
+      <workItem from="1587182133820" duration="4000" />
+      <workItem from="1587202415470" duration="599000" />
+      <workItem from="1587554061969" duration="16123000" />
+      <workItem from="1587736352173" duration="2021000" />
+      <workItem from="1588049131510" duration="7747000" />
+      <workItem from="1588095631865" duration="299000" />
+      <workItem from="1588151006399" duration="3141000" />
+      <workItem from="1588227292060" duration="578000" />
+      <workItem from="1588475946115" duration="5335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9178000" />
+    <option name="totallyTimeSpent" value="93615000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="26" width="1387" height="801" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34148148" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.27653214" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49808428" visible="true" weight="0.21480502" />
+      <window_info id="Structure" order="1" sideWeight="0.5019157" side_tool="true" weight="0.21480502" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884902" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32884902" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32884902" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.305949" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49808428" visible="true" weight="0.23914643" />
+      <window_info id="Structure" order="1" sideWeight="0.5019157" side_tool="true" weight="0.21480502" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884902" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32884902" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32884902" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29968944" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions/src/index.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/model/collection/collection.model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/initDefault.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/lib/config/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/node_modules/express-validator/src/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/functions/firebase-debug.log" />
+    <entry file="file://$PROJECT_DIR$/functions/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/exception/WrongCredentialsException.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/services/authenication/authenication.service.ts">
+    <entry file="file://$PROJECT_DIR$/firebase.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/config/photohub-e7e04-firebase-adminsdk-ym1pr-57f17bd894.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/config/json.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/lib/config/photohub-e7e04-firebase-adminsdk-ym1pr-57f17bd894.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/typescript/lib/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8246">
+          <caret line="81" column="3" lean-forward="true" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/@google-cloud/common/build/src/service-object.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/@google-cloud/storage/build/src/file.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/@types/lodash/fp.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="4974" column="8" selection-start-line="4974" selection-start-column="8" selection-end-line="4974" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/src/storage-trigger/storage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/middleware/validate.middleware.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="427">
+          <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/middleware/validate-input.middleware.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/middleware/validation-handler.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/logIn.dto.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/app.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/tag/tag.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/middleware/auth.middleware.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/exception/AuthenticationTokenMissingException.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/interfaces/controller.interface.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/interfaces/dataStoredInToken.interface.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/interfaces/tokenData.interface.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/functions/src/exception/WrongAuthenticationTokenException.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/src/middleware/error.middleware.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -317,146 +499,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/exception/UserWithUsernameAlreadyExistException.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/functions/src/middleware/auth.photographer.middleware.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/exception/WrongAuthenticationTokenException.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/functions/src/middleware/auth.middleware.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/exception/HttpException.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/functions/src/config/firebase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/lib/controller/booking/booking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/user/user.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="44" column="22" lean-forward="true" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/node_modules/@types/ngeohash/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/user/user.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/interfaces/dataStoredInToken.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1973">
+          <caret line="153" column="4" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/user/user.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/src/interfaces/requestUser.interface.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="68">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/config/keyJWT.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/config/json.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/authenication.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/image/imageSearch.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1921">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/model/user/user.dao.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/model/user/user.dto.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/model/collection/collection.model.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/signUp.dto.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/logIn.dto.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/initDefault.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/model/collection/collection.dao.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1845">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/src/model/tag/tag.dao.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/node_modules/@types/lodash/fp.d.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/image/imageToStorage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84524">
-          <caret line="4974" column="8" selection-start-line="4974" selection-start-column="8" selection-end-line="4974" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/lib/config/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/model/image/image.dao.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2346">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/lib/config/photohub-e7e04-firebase-adminsdk-ym1pr-57f17bd894.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/config/firebase.ts">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/authenication.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/firebase-debug.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/src/server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="45">
+          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/account/signUp.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/collection/collection.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="217" column="30" lean-forward="true" selection-start-line="217" selection-start-column="30" selection-end-line="217" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/src/controller/image/image.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
+        <state relative-caret-position="220">
+          <caret line="191" column="82" lean-forward="true" selection-start-line="191" selection-start-column="82" selection-end-line="191" selection-end-column="82" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/image/image.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="15" selection-start-line="17" selection-start-column="12" selection-end-line="19" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#830#1627#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/lib/controller/chat/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/services/authenication/authenication.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/app.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/chat/chat.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/chat/chat.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/services/booking/booking.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/controller/booking/booking.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/src/model/booking/booking.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
         </state>
       </provider>
     </entry>

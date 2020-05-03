@@ -6,7 +6,10 @@ class CollectionDAO {
     private collectionsRef: any;
 
     constructor(user_id: any) {
-        this.collectionsRef = firestoreRef.collection("users").doc(user_id).collection("collections");
+        this.collectionsRef = firestoreRef
+            .collection("users")
+            .doc(user_id)
+            .collection("collections");
     }
 
     convertToCollectionModel = (collection: CollectionCreateDTO) => {
@@ -14,26 +17,29 @@ class CollectionDAO {
             name: collection.name,
             date_create: "2018-1-1",
             images_snippet: [],
-        }
-    }
+        };
+    };
 
     findCollectionsById = async (collectionId: string) => {
         const collectionRef = this.collectionsRef.doc(collectionId);
         const collection = await collectionRef.get();
 
-        return {...collection.data(), id: collection.id}
+        return {...collection.data(), id: collection.id};
     };
 
     findCollectionsByName = async (collectionName: string) => {
-        const collectionRef = this.collectionsRef.where("name", "==", collectionName);
+        const collectionRef = this.collectionsRef.where(
+            "name",
+            "==",
+            collectionName
+        );
         const collections = await collectionRef.get();
 
         const listCollections: any[] = [];
 
         collections.forEach((collection: any) => {
-                listCollections.push({...collection, id: collection.id});
-            }
-        );
+            listCollections.push({...collection, id: collection.id});
+        });
         return listCollections;
     };
 
@@ -57,15 +63,48 @@ class CollectionDAO {
     };
 
     createNewCollection = async (collection: any) => {
-        const collections = await this.collectionsRef.where("name", "==", collection.name).get();
+        const collections = await this.collectionsRef
+            .where("name", "==", collection.name)
+            .get();
 
         if (collections.docs.length !== 0) {
-            throw new HttpException(400, "Already exist collection" + collection.name);
+            throw new HttpException(
+                400,
+                "Already exist collection" + collection.name
+            );
         } else {
             const collectionModel = await this.collectionsRef.add(collection);
             const collectionData = await collectionModel.get();
             return {...collectionData.data(), collection_id: collectionData.id};
         }
+    };
+
+    deleteCollection = async (collectionId: string) => {
+        try {
+            const statusDelete = await this.collectionsRef.doc(collectionId).delete();
+            console.log("statusDelete", statusDelete);
+            return {
+                message: "Delete collection success",
+            };
+        } catch (error) {
+            throw new HttpException(400, error.message);
+        }
+    };
+
+    updateCollection = async (collectionId: string, collection: any) => {
+        const collectionRef = await this.collectionsRef.doc(collectionId);
+
+        if (collectionRef) {
+            await collectionRef.set(collection, {
+                merge: true,
+            });
+        } else {
+            throw new HttpException(400, "Collection doesn't exist !");
+        }
+
+        return {
+            message: "Update collection successfully !",
+        };
     };
 
     addImageToCollection = async (image_id: any, collection_id: any) => {
@@ -79,24 +118,36 @@ class CollectionDAO {
         if (collectionData && imageData) {
             const images_snippet = collectionData.images_snippet;
 
-            if (images_snippet.filter((item: any) => item.image_id === image_id).length === 0) {
+            if (
+                images_snippet.filter((item: any) => item.image_id === image_id)
+                    .length === 0
+            ) {
                 images_snippet.push({
                     image_id: image_id,
+                    url: imageData.url,
                     thumbnail_url: imageData.thumbnail_url,
                 });
             } else {
-                throw new HttpException(400, "Image already in collection \"" + collectionData.name + "\"");
+                return {
+                    message: 'Image already in collection "' + collectionData.name + '"',
+                };
             }
 
-            await collectionRef.set({
-                images_snippet,
-            }, {merge: true});
+            await collectionRef.set(
+                {
+                    images_snippet,
+                },
+                {merge: true}
+            );
 
             return {
-                message: "Add image to collection \"" + collectionData.name + "\" successfully !",
-            }
+                message:
+                    'Add image to collection "' +
+                    collectionData.name +
+                    '" successfully !',
+            };
         } else {
-            throw new HttpException(400, "Collection or Image does not exist !")
+            throw new HttpException(400, "Collection or Image does not exist !");
         }
     };
 
@@ -112,25 +163,37 @@ class CollectionDAO {
             let images_snippet = collectionData.images_snippet;
 
             console.log(images_snippet, image_id);
-            if (images_snippet.filter((item: any) => item.image_id === image_id).length > 0) {
-                images_snippet = images_snippet.filter((item: any) => item.image_id !== image_id)
+            if (
+                images_snippet.filter((item: any) => item.image_id === image_id)
+                    .length > 0
+            ) {
+                images_snippet = images_snippet.filter(
+                    (item: any) => item.image_id !== image_id
+                );
             } else {
-                throw new HttpException(400, "Image doesn't exist in collection \"" + collectionData.name + "\"");
+                return {
+                    message:
+                        "Image doesn't exist in collection \"" + collectionData.name + '" ',
+                };
             }
 
-            await collectionRef.set({
-                images_snippet,
-            }, {merge: true});
+            await collectionRef.set(
+                {
+                    images_snippet,
+                },
+                {merge: true}
+            );
 
             return {
-                message: "Deleted image from collection \"" + collectionData.name + "\" successfully !",
-            }
+                message:
+                    'Deleted image from collection "' +
+                    collectionData.name +
+                    '" successfully !',
+            };
         } else {
-            throw new HttpException(400, "Collection or Image does not exist !")
+            throw new HttpException(400, "Collection or Image does not exist !");
         }
-    }
-
-
+    };
 }
 
 export default CollectionDAO;

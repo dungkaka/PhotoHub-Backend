@@ -73,13 +73,13 @@ class AuthenticationController implements Controller {
             await initDefault.init();
 
         } catch (error) {
-            response.status(400).send({
+            response.send({
                 status: false,
-                code: error.status,
+                code: 400,
                 message: error.message,
             });
         }
-    }
+    };
 
     private loggingIn = async (request: express.Request, response: express.Response, next: express.NextFunction) => {
         const logInDTO: LogInDTO = request.body;
@@ -107,9 +107,9 @@ class AuthenticationController implements Controller {
                 throw new HttpException(400, "Check Username or Password");
             }
         } catch (error) {
-            response.status(400).send(JSON.stringify({
+            response.send(JSON.stringify({
                 status: false,
-                code: error.status,
+                code: 400,
                 message: error.message,
             }, null, '\t'))
         }
