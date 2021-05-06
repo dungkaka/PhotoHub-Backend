@@ -29,7 +29,7 @@
     "firebase-functions": "^3.3.0",
     "firesql": "^2.0.2",
     "fs": "0.0.1-security",
-    "json": "^9.0.6",
+    "json": "^10.0.0",
     "jsonwebtoken": "^8.5.1",
     "mkdirp": "^1.0.3",
     "ngeohash": "^0.6.3",
